@@ -1,0 +1,80 @@
+{
+  "imageName": "m6.png",
+  "description": "Mobile Chat List Screen. Top Search bar followed by a list of active chat conversations (Groups and Individuals), with last message timestamps and previews. Includes Bottom Navigation Bar.",
+  "ui_components": [
+    {
+      "name": "Top Search Bar",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Chat List Container",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Chat List Item (Group)",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Chat List Item (Individual)",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Last Message Preview",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Timestamp",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Bottom Navigation Bar",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    }
+  ],
+  "screen_dimensions": {
+    "width": 181,
+    "height": 412
+  }
+}

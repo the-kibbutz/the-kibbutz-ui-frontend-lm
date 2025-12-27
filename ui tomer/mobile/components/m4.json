@@ -1,0 +1,90 @@
+{
+  "imageName": "m4.png",
+  "description": "Mobile Sign Up Screen. Full-screen registration form with 'Create New Account' header, name inputs, birth date selectors, gender dropdown, email, new password, and 'Sign Up' button.",
+  "ui_components": [
+    {
+      "name": "Sign Up Header Text",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "First Name Input",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Last Name Input",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Date of Birth Dropdowns",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Gender Selector",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Email Input",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "New Password Input",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Register Submission Button",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    }
+  ],
+  "screen_dimensions": {
+    "width": 175,
+    "height": 412
+  }
+}

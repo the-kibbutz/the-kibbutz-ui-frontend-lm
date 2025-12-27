@@ -1,0 +1,100 @@
+{
+  "imageName": "m3.png",
+  "description": "Mobile Login Screen. Full-screen login form with 'Login' header, Social Login buttons, Email/Password inputs, 'Show Password' toggle, 'Forgot Password' link, and 'Login' button.",
+  "ui_components": [
+    {
+      "name": "Login Header Text",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Google Login Button",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Microsoft Login Button",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Divider",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Email Input Field",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Password Input Field",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Show Password Toggle",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Forgot Password Link",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Login Submisison Button",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    }
+  ],
+  "screen_dimensions": {
+    "width": 175,
+    "height": 412
+  }
+}

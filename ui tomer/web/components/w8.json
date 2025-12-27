@@ -1,0 +1,100 @@
+{
+  "imageName": "w8.png",
+  "description": "Desktop Chat Interface. Three-pane layout: Left Sidebar (Navigation), Middle Pane (Active Chat Thread with message bubbles), Right Pane (Chat List with Search bar and list of active conversations/groups).",
+  "ui_components": [
+    {
+      "name": "Chat Layout Container",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Left Navigation Sidebar",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Chat List Sidebar (Right)",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Chat Search Bar",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Active Chat Window (Center)",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Message Bubble (Incoming)",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Message Bubble (Outgoing)",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Message Input Area",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Group Chat Header",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    }
+  ],
+  "screen_dimensions": {
+    "width": 681,
+    "height": 490
+  }
+}

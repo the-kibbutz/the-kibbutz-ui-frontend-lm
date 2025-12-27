@@ -1,0 +1,110 @@
+{
+  "imageName": "w5.png",
+  "description": "Login Card Component. Centered modal-style card containing 'Login' header, Social Login buttons (Google, Microsoft), 'Or' divider, Email and Password input fields, 'Forgot Password' link, and 'Login' action button.",
+  "ui_components": [
+    {
+      "name": "Modal Card Container",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Login Header Text",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Google Login Button",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Microsoft Login Button",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Divider Line ('Or')",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Email Input Field",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Password Input Field",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Show Password Toggle",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Forgot Password Link",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Login Action Button",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    }
+  ],
+  "screen_dimensions": {
+    "width": 690,
+    "height": 469
+  }
+}

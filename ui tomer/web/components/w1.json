@@ -1,0 +1,50 @@
+{
+  "imageName": "w1.png",
+  "description": "Typography and Color Stylesheet. Displays font families (Noto Sans Hebrew Droid), weights (bold, regular), sizes, and color palette codes (#000, #3E3BEF, #A6BED5, etc.). Not a functional UI component but a style guide.",
+  "ui_components": [
+    {
+      "name": "Color Palette Swatches",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Typography Examples (H1, H2, Body)",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Hebrew Font Samples",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "English Font Samples",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    }
+  ],
+  "screen_dimensions": {
+    "width": 682,
+    "height": 487
+  }
+}

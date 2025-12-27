@@ -1,0 +1,60 @@
+{
+  "imageName": "w7.png",
+  "description": "Base Desktop Layout Structure. Shows the persistent Left Sidebar with User Profile and Navigation menu, and the Top Bar. The main content area is empty, serving as a template for other pages.",
+  "ui_components": [
+    {
+      "name": "Layout Container",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Top Navigation Bar",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Left Sidebar Navigation",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "User Profile Mini-Card",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    },
+    {
+      "name": "Settings Icon",
+      "box": {
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
+      },
+      "notes": "Location to be defined"
+    }
+  ],
+  "screen_dimensions": {
+    "width": 685,
+    "height": 496
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Top Color Palette",
+  "colors": [
+    {
+      "hex": "#6a6f7d",
+      "name": "Dark Slate Gray"
+    },
+    {
+      "hex": "#f1dab0",
+      "name": "Moccasin"
+    },
+    {
+      "hex": "#a6bed5",
+      "name": "Steel Blue"
+    },
+    {
+      "hex": "#bedce4",
+      "name": "Light Blue"
+    },
+    {
+      "hex": "#fbf1f1",
+      "name": "Lavender Blush"
+    }
+  ]
+}
