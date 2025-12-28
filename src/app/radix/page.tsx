@@ -22,8 +22,6 @@ import RadixStyleGuide from '@/components/radix/RadixStyleGuide';
 import RadixChatScreen from '@/components/radix/RadixChatScreen';
 import RadixMobileShell from '@/components/radix/RadixMobileShell';
 
-export const dynamic = 'force-dynamic';
-
 export default async function RadixPage() {
   const webScreens = await getScreens('web');
   const mobileScreens = await getScreens('mobile');

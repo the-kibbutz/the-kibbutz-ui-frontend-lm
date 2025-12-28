@@ -9,9 +9,6 @@ import Grid from '@mui/material/Grid';
 import ScreenCard from '@/components/ScreenCard';
 import BackButton from '@/components/BackButton';
 
-// Since this is a server component, we can use async/await and getScreens directly
-export const dynamic = 'force-dynamic';
-
 export default async function ReferencePage() {
   const webScreens = await getScreens('web');
   const mobileScreens = await getScreens('mobile');

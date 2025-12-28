@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Box, Container, Grid, Paper, Typography, AppBar, Toolbar, InputBase, IconButton, Avatar, List, ListItem, ListItemIcon, ListItemText, Divider, Button } from '@mui/material';
+import { Box, Container, Grid, Paper, Typography, AppBar, Toolbar, InputBase, IconButton, Avatar, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Divider, Button } from '@mui/material';
 import { styled, alpha } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
 import HomeIcon from '@mui/icons-material/Home';
@@ -99,32 +99,40 @@ export default function PostFeedLayout() {
                 <Container maxWidth="lg">
                     <Grid container spacing={3}>
                         {/* Left Sidebar */}
-                        <Grid item xs={12} md={3} sx={{ display: { xs: 'none', md: 'block' } }}>
+                        <Grid size={{ xs: 12, md: 3 }} sx={{ display: { xs: 'none', md: 'block' } }}>
                             <Paper elevation={0} sx={{ p: 2, borderRadius: 2 }}>
                                 <List>
-                                    <ListItem button>
-                                        <ListItemIcon><HomeIcon /></ListItemIcon>
-                                        <ListItemText primary="Feed" />
+                                    <ListItem disablePadding>
+                                        <ListItemButton>
+                                            <ListItemIcon><HomeIcon /></ListItemIcon>
+                                            <ListItemText primary="Feed" />
+                                        </ListItemButton>
                                     </ListItem>
-                                    <ListItem button>
-                                        <ListItemIcon><ChatIcon /></ListItemIcon>
-                                        <ListItemText primary="Chats" />
+                                    <ListItem disablePadding>
+                                        <ListItemButton>
+                                            <ListItemIcon><ChatIcon /></ListItemIcon>
+                                            <ListItemText primary="Chats" />
+                                        </ListItemButton>
                                     </ListItem>
-                                    <ListItem button>
-                                        <ListItemIcon><PeopleIcon /></ListItemIcon>
-                                        <ListItemText primary="Friends" />
+                                    <ListItem disablePadding>
+                                        <ListItemButton>
+                                            <ListItemIcon><PeopleIcon /></ListItemIcon>
+                                            <ListItemText primary="Friends" />
+                                        </ListItemButton>
                                     </ListItem>
                                     <Divider sx={{ my: 1 }} />
-                                    <ListItem button>
-                                        <ListItemIcon><SettingsIcon /></ListItemIcon>
-                                        <ListItemText primary="Settings" />
+                                    <ListItem disablePadding>
+                                        <ListItemButton>
+                                            <ListItemIcon><SettingsIcon /></ListItemIcon>
+                                            <ListItemText primary="Settings" />
+                                        </ListItemButton>
                                     </ListItem>
                                 </List>
                             </Paper>
                         </Grid>
 
                         {/* Main Feed */}
-                        <Grid item xs={12} md={6}>
+                        <Grid size={{ xs: 12, md: 6 }}>
                             {/* Create Post */}
                             <Paper elevation={0} sx={{ p: 2, mb: 3, borderRadius: 2 }}>
                                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
@@ -147,7 +155,7 @@ export default function PostFeedLayout() {
                         </Grid>
 
                         {/* Right Sidebar */}
-                        <Grid item xs={12} md={3} sx={{ display: { xs: 'none', md: 'block' } }}>
+                        <Grid size={{ xs: 12, md: 3 }} sx={{ display: { xs: 'none', md: 'block' } }}>
                             <Paper elevation={0} sx={{ p: 2, borderRadius: 2, mb: 3 }}>
                                 <Typography variant="subtitle1" fontWeight="bold" gutterBottom>Stories</Typography>
                                 <Box sx={{ display: 'flex', gap: 1, overflowX: 'auto', pb: 1 }}>

@@ -15,8 +15,6 @@ import MobileNav from '@/components/mobile/MobileNav';
 import MobileLanding from '@/components/mobile/MobileLanding';
 import MobileProfile from '@/components/mobile/MobileProfile';
 
-export const dynamic = 'force-dynamic';
-
 export default async function LiveDashboardPage() {
     const webScreens = await getScreens('web');
     const mobileScreens = await getScreens('mobile');

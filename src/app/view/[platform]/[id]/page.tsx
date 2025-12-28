@@ -1,29 +1,31 @@
 import * as React from 'react';
-import { getScreen } from '@/lib/data';
+import { getScreen, getScreens } from '@/lib/data';
+import BackButton from '@/components/BackButton';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
+import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
 import ListItemIcon from '@mui/material/ListItemIcon';
-import Divider from '@mui/material/Divider';
-import Button from '@mui/material/Button';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ListItemText from '@mui/material/ListItemText';
 import WidgetsIcon from '@mui/icons-material/Widgets';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-interface Props {
-    params: { platform: string; id: string };
+export async function generateStaticParams() {
+    const webScreens = await getScreens('web');
+    const mobileScreens = await getScreens('mobile');
+
+    const webParams = webScreens.map(s => ({ platform: 'web', id: s.id }));
+    const mobileParams = mobileScreens.map(s => ({ platform: 'mobile', id: s.id }));
+
+    return [...webParams, ...mobileParams];
 }
 
-export const dynamic = 'force-dynamic';
-
-export default async function ScreenDetail({ params }: Props) {
-    const { platform, id } = params;
+export default async function ScreenDetail({ params }: { params: Promise<{ platform: string; id: string }> }) {
+    const { platform, id } = await params;
 
     if (platform !== 'web' && platform !== 'mobile') {
         notFound();
@@ -38,9 +40,7 @@ export default async function ScreenDetail({ params }: Props) {
     return (
         <Container maxWidth="xl" sx={{ py: 4 }}>
             <Box sx={{ mb: 3 }}>
-                <Button component={Link} href="/" startIcon={<ArrowBackIcon />}>
-                    Back to Dashboard
-                </Button>
+                <BackButton href="/" label="Back to Dashboard" />
             </Box>
 
             <Grid container spacing={4}>

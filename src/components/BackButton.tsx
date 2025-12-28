@@ -4,10 +4,15 @@ import Button from '@mui/material/Button';
 import Link from 'next/link';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
-export default function BackButton() {
+interface BackButtonProps {
+    href?: string;
+    label?: string;
+}
+
+export default function BackButton({ href = "/", label = "Back to Home" }: BackButtonProps) {
     return (
-        <Button component={Link} href="/" startIcon={<ArrowBackIcon />}>
-            Back to Home
+        <Button component={Link} href={href} startIcon={<ArrowBackIcon />}>
+            {label}
         </Button>
     );
 }
