@@ -9,7 +9,7 @@ const roboto = Roboto({
 });
 
 // Custom Colors from palette.json
-const paletteColors = {
+export const paletteColors = {
   darkSlateGray: '#6a6f7d',
   moccasin: '#f1dab0',
   steelBlue: '#a6bed5',

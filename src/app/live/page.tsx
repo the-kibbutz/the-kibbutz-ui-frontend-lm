@@ -10,6 +10,10 @@ import LoginCard from '@/components/auth/LoginCard';
 import SignupCard from '@/components/auth/SignupCard';
 import PostCard from '@/components/widgets/PostCard';
 import ChatList from '@/components/widgets/ChatList';
+import ColorPaletteTable from '@/components/ColorPaletteTable';
+import MobileNav from '@/components/mobile/MobileNav';
+import MobileLanding from '@/components/mobile/MobileLanding';
+import MobileProfile from '@/components/mobile/MobileProfile';
 
 export const dynamic = 'force-dynamic';
 
@@ -35,6 +39,8 @@ export default async function LiveDashboardPage() {
                 </Typography>
             </Box>
 
+            <ColorPaletteTable />
+
             {/* Web Screens Section */}
             <Box sx={{ mb: 6 }}>
                 <Typography variant="h4" component="h2" gutterBottom sx={{ mb: 3, borderBottom: 1, borderColor: 'divider', pb: 1 }}>
@@ -43,8 +49,8 @@ export default async function LiveDashboardPage() {
                 <Grid container spacing={3}>
                     {webScreens.map((screen) => {
                         let PreviewComponent = null;
-                        if (screen.id === 'w5') PreviewComponent = <LoginCard />;
-                        if (screen.id === 'w6') PreviewComponent = <SignupCard />;
+                        if (screen.id === 'w5') PreviewComponent = <LoginCard idPrefix="web-login" />;
+                        if (screen.id === 'w6') PreviewComponent = <SignupCard idPrefix="web-signup" />;
                         if (screen.id === 'w2') PreviewComponent = <PostCard />; // Showing a post card as preview for Feed
                         if (screen.id === 'w2') PreviewComponent = <PostCard />; // Showing a post card as preview for Feed
                         if (screen.id === 'w8') PreviewComponent = <ChatList />;
@@ -67,18 +73,16 @@ export default async function LiveDashboardPage() {
                 <Grid container spacing={3}>
                     {mobileScreens.map((screen) => {
                         let PreviewComponent = null;
-                        if (screen.id === 'm3') PreviewComponent = <LoginCard />;
-                        if (screen.id === 'm4') PreviewComponent = <SignupCard />;
-                        // m1 is main nav, could use an image or generic preview
-                        // m2 is landing
-                        // m5 is profile
-                        if (screen.id === 'm5') PreviewComponent = null; // Found reference error before, keeping null or fixing import. 
-                        // Actually I should fix the import for ProfileCard if I wanted it, but let's use ChatList for m6
+                        if (screen.id === 'm1') PreviewComponent = <MobileNav />;
+                        if (screen.id === 'm2') PreviewComponent = <MobileLanding />;
+                        if (screen.id === 'm3') PreviewComponent = <LoginCard idPrefix="mobile-login" />;
+                        if (screen.id === 'm4') PreviewComponent = <SignupCard idPrefix="mobile-signup" />;
+                        if (screen.id === 'm5') PreviewComponent = <MobileProfile />;
                         if (screen.id === 'm6') PreviewComponent = <ChatList />;
 
                         return (
                             <Grid size={{ xs: 12, sm: 6, md: 4 }} key={screen.id}>
-                                <LiveScreenCard screen={screen} platform="mobile" imageHeight={300} componentPreview={PreviewComponent} />
+                                <LiveScreenCard screen={screen} platform="mobile" imageHeight={500} componentPreview={PreviewComponent} />
                             </Grid>
                         )
                     })}

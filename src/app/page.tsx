@@ -25,43 +25,55 @@ export default function LandingPage() {
         </Typography>
       </Box>
 
-      <Grid container spacing={6} justifyContent="center">
+      <Grid container spacing={4} justifyContent="center">
         {/* Reference Designs Card */}
-        <Grid size={{ xs: 12, md: 5 }}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Card sx={{ height: '100%', borderRadius: 4, transition: 'transform 0.2s', '&:hover': { transform: 'scale(1.02)' } }}>
             <CardActionArea component={Link} href="/reference" sx={{ height: '100%', p: 4, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-              <PhotoLibraryIcon sx={{ fontSize: 80, color: 'secondary.main', mb: 2 }} />
-              <Typography variant="h4" gutterBottom fontWeight="bold">
+              <PhotoLibraryIcon sx={{ fontSize: 64, color: 'secondary.main', mb: 2 }} />
+              <Typography variant="h5" gutterBottom fontWeight="bold">
                 Reference Designs
               </Typography>
-              <Typography variant="body1" color="text.secondary">
-                Browse Tomer's original UI images and component breakdown (JSONs).
+              <Typography variant="body2" color="text.secondary">
+                Original UI images and JSONs.
               </Typography>
             </CardActionArea>
           </Card>
         </Grid>
 
         {/* Live Implementation Card */}
-        <Grid size={{ xs: 12, md: 5 }}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Card sx={{ height: '100%', borderRadius: 4, transition: 'transform 0.2s', '&:hover': { transform: 'scale(1.02)' } }}>
             <CardActionArea component={Link} href="/live" sx={{ height: '100%', p: 4, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-              <WebIcon sx={{ fontSize: 80, color: 'primary.main', mb: 2 }} />
-              <Typography variant="h4" gutterBottom fontWeight="bold">
-                Live App
+              <WebIcon sx={{ fontSize: 64, color: 'primary.main', mb: 2 }} />
+              <Typography variant="h5" gutterBottom fontWeight="bold">
+                MUI Live App
               </Typography>
-              <Typography variant="body1" color="text.secondary">
-                View the fully functional React/MUI implementation of the designs.
+              <Typography variant="body2" color="text.secondary">
+                React/MUI implementation.
+              </Typography>
+            </CardActionArea>
+          </Card>
+        </Grid>
+
+        {/* Radix Implementation Card */}
+        <Grid size={{ xs: 12, md: 4 }}>
+          <Card sx={{ height: '100%', borderRadius: 4, transition: 'transform 0.2s', '&:hover': { transform: 'scale(1.02)' } }}>
+            <CardActionArea component={Link} href="/radix" sx={{ height: '100%', p: 4, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+              <Box sx={{ fontSize: 64, mb: 2, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#8b5cf6' }}>
+                {/* Using a generic icon or text for Radix if specific icon not available */}
+                R
+              </Box>
+              <Typography variant="h5" gutterBottom fontWeight="bold">
+                Radix UI Version
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Radix Themes implementation.
               </Typography>
             </CardActionArea>
           </Card>
         </Grid>
       </Grid>
-
-      <Box sx={{ mt: 8, textAlign: 'center' }}>
-        <Link href="/showcase" style={{ textDecoration: 'none', color: 'gray' }}>
-          <Typography variant="caption">View Individual Component Library (Showcase)</Typography>
-        </Link>
-      </Box>
     </Container>
   );
 }

@@ -12,13 +12,22 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import { paletteColors } from '@/theme/theme';
 
 export default function PostCard() {
     return (
-        <Card sx={{ maxWidth: '100%', mb: 2, borderRadius: 2, boxShadow: 'none', border: 1, borderColor: 'divider' }}>
+        <Card sx={{
+            maxWidth: '100%',
+            mb: 2,
+            borderRadius: 3,
+            boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
+            border: 1,
+            borderColor: paletteColors.steelBlue,
+            overflow: 'visible' // Allow elements to pop if needed, though mostly standard
+        }}>
             <CardHeader
                 avatar={
-                    <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+                    <Avatar sx={{ bgcolor: paletteColors.moccasin, color: paletteColors.darkSlateGray, fontWeight: 'bold' }} aria-label="user">
                         R
                     </Avatar>
                 }
@@ -27,8 +36,8 @@ export default function PostCard() {
                         <MoreVertIcon />
                     </IconButton>
                 }
-                title="Shrimp and Chorizo Paella"
-                subheader="September 14, 2016"
+                title={<Typography fontWeight="bold" color="text.primary">Shrimp and Chorizo Paella</Typography>}
+                subheader={<Typography variant="caption" color="primary.main">September 14, 2016</Typography>}
             />
 
             {/* Placeholder for Media - typically from w2.json feed post */}
@@ -39,14 +48,14 @@ export default function PostCard() {
                     if you like.
                 </Typography>
             </CardContent>
-            <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
+            <CardActions disableSpacing sx={{ borderTop: 1, borderColor: 'divider', bgcolor: paletteColors.lavenderBlush }}>
+                <IconButton aria-label="add to favorites" sx={{ color: 'secondary.main' }}>
                     <FavoriteIcon />
                 </IconButton>
-                <IconButton aria-label="comment">
+                <IconButton aria-label="comment" sx={{ color: paletteColors.darkSlateGray }}>
                     <ChatBubbleOutlineIcon />
                 </IconButton>
-                <IconButton aria-label="share">
+                <IconButton aria-label="share" sx={{ ml: 'auto', color: paletteColors.darkSlateGray }}>
                     <ShareIcon />
                 </IconButton>
             </CardActions>

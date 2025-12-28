@@ -7,24 +7,38 @@ import Box from '@mui/material/Box';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import ChatListItem from './ChatListItem';
+import { paletteColors } from '@/theme/theme';
 
 export default function ChatList() {
     return (
-        <Paper elevation={0} sx={{ height: '100%', display: 'flex', flexDirection: 'column', bgcolor: 'background.paper', borderRadius: 2 }}>
-            <Box sx={{ p: 2, borderBottom: 1, borderColor: 'divider' }}>
+        <Paper elevation={3} sx={{
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            bgcolor: 'background.paper',
+            borderRadius: 3,
+            overflow: 'hidden',
+            border: 1,
+            borderColor: 'divider'
+        }}>
+            <Box sx={{ p: 2, bgcolor: 'primary.main', color: 'white' }}>
                 <Typography variant="h6" fontWeight="bold" gutterBottom>
                     Messages
                 </Typography>
                 <Box sx={{
                     display: 'flex',
                     alignItems: 'center',
-                    bgcolor: 'action.hover',
+                    bgcolor: 'rgba(255, 255, 255, 0.15)',
                     borderRadius: 2,
                     px: 2,
-                    py: 0.5
+                    py: 0.5,
+                    border: '1px solid rgba(255,255,255,0.2)'
                 }}>
-                    <SearchIcon color="action" />
-                    <InputBase placeholder="Search chats..." sx={{ ml: 1, flex: 1 }} />
+                    <SearchIcon sx={{ color: 'rgba(255,255,255,0.7)' }} />
+                    <InputBase
+                        placeholder="Search chats..."
+                        sx={{ ml: 1, flex: 1, color: 'white', '& ::placeholder': { color: 'rgba(255,255,255,0.5)', opacity: 1 } }}
+                    />
                 </Box>
             </Box>
 
