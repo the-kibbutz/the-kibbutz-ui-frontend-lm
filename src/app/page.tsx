@@ -2,6 +2,7 @@ import * as React from 'react';
 import { getScreens } from '@/lib/data';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
@@ -23,9 +24,19 @@ export default async function Home() {
         <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: 'bold', color: 'primary.main' }}>
           The Kibbutz Showcase
         </Typography>
-        <Typography variant="h5" color="text.secondary">
+        <Typography variant="h5" color="text.secondary" gutterBottom>
           UI Design & Component Library
         </Typography>
+        <Button
+          component={Link}
+          href="/showcase"
+          variant="contained"
+          size="large"
+          color="secondary"
+          sx={{ mt: 2, borderRadius: 20, px: 4 }}
+        >
+          View Live Component Library
+        </Button>
       </Box>
 
       {/* Web Screens Section */}
