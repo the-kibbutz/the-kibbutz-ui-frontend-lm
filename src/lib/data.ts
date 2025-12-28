@@ -1,32 +1,8 @@
 import fs from 'fs';
 import path from 'path';
+import { ScreenData } from './types';
 
-export interface ScreenDimensions {
-    width: number;
-    height: number;
-}
-
-export interface ComponentBox {
-    x: number | null;
-    y: number | null;
-    w: number | null;
-    h: number | null;
-}
-
-export interface UiComponent {
-    name: string;
-    box: ComponentBox;
-    notes: string;
-}
-
-export interface ScreenData {
-    id: string;
-    platform: 'web' | 'mobile';
-    imageName: string;
-    description: string;
-    ui_components: UiComponent[];
-    screen_dimensions: ScreenDimensions;
-}
+export type { ScreenData }; // Re-export if needed, or just let consumers import from types
 
 const UI_BASE_PATH = path.join(process.cwd(), 'public/assets/ui');
 
