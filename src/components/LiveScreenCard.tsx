@@ -26,8 +26,15 @@ const LIVE_ROUTES: Record<string, string> = {
     'w6': '/live/web/w6',
     'w8': '/live/web/w8',
     'w3': '/live/web/w3',
+    'w7': '/live/web/w7',
+    'w1': '/live/web/w1',
     // Mobile
     'm3': '/live/mobile/m3',
+    'm4': '/live/mobile/m4',
+    'm1': '/live/mobile/m1',
+    'm2': '/live/mobile/m2',
+    'm5': '/live/mobile/m5',
+    'm6': '/live/mobile/m6',
 };
 
 export default function LiveScreenCard({ screen, platform, imageHeight = 200, componentPreview }: LiveScreenCardProps) {

@@ -46,7 +46,9 @@ export default async function LiveDashboardPage() {
                         if (screen.id === 'w5') PreviewComponent = <LoginCard />;
                         if (screen.id === 'w6') PreviewComponent = <SignupCard />;
                         if (screen.id === 'w2') PreviewComponent = <PostCard />; // Showing a post card as preview for Feed
+                        if (screen.id === 'w2') PreviewComponent = <PostCard />; // Showing a post card as preview for Feed
                         if (screen.id === 'w8') PreviewComponent = <ChatList />;
+                        // w3 has no card component, shows image or we could make one. w7 is just layout.
 
                         return (
                             <Grid size={{ xs: 12, sm: 6, md: 4 }} key={screen.id}>
@@ -66,6 +68,13 @@ export default async function LiveDashboardPage() {
                     {mobileScreens.map((screen) => {
                         let PreviewComponent = null;
                         if (screen.id === 'm3') PreviewComponent = <LoginCard />;
+                        if (screen.id === 'm4') PreviewComponent = <SignupCard />;
+                        // m1 is main nav, could use an image or generic preview
+                        // m2 is landing
+                        // m5 is profile
+                        if (screen.id === 'm5') PreviewComponent = null; // Found reference error before, keeping null or fixing import. 
+                        // Actually I should fix the import for ProfileCard if I wanted it, but let's use ChatList for m6
+                        if (screen.id === 'm6') PreviewComponent = <ChatList />;
 
                         return (
                             <Grid size={{ xs: 12, sm: 6, md: 4 }} key={screen.id}>

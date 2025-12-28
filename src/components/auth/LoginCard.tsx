@@ -5,13 +5,17 @@ import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
-import SocialButton from '../ui/SocialButton';
-import FormInput from '../ui/FormInput';
-import ActionButton from '../ui/ActionButton';
+import SocialButton from '@/components/ui/SocialButton';
+import FormInput from '@/components/ui/FormInput';
+import ActionButton from '@/components/ui/ActionButton';
+import Logo from '@/components/ui/Logo';
 
 export default function LoginCard() {
     return (
         <Paper elevation={0} sx={{ p: 4, width: '100%', maxWidth: 400, mx: 'auto', borderRadius: 4, border: 1, borderColor: 'divider' }}>
+            <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
+                <Logo width={180} height={60} />
+            </Box>
             <Typography variant="h5" component="h1" align="center" gutterBottom sx={{ fontWeight: 'bold' }}>
                 Login
             </Typography>

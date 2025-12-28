@@ -12,6 +12,7 @@ import Grid from '@mui/material/Grid'; // v2 Grid (MUI v6) logic handled by impo
 import FormInput from '../ui/FormInput';
 import ActionButton from '../ui/ActionButton';
 import MenuItem from '@mui/material/MenuItem';
+import Logo from '@/components/ui/Logo';
 
 const GENDER_OPTIONS = ['Male', 'Female', 'Other'];
 const DAYS = Array.from({ length: 31 }, (_, i) => i + 1);
@@ -21,6 +22,9 @@ const YEARS = Array.from({ length: 100 }, (_, i) => new Date().getFullYear() - i
 export default function SignupCard() {
     return (
         <Paper elevation={0} sx={{ p: 4, width: '100%', maxWidth: 500, mx: 'auto', borderRadius: 4, border: 1, borderColor: 'divider' }}>
+            <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
+                <Logo width={180} height={60} />
+            </Box>
             <Typography variant="h5" component="h1" align="center" gutterBottom sx={{ fontWeight: 'bold' }}>
                 Create New Account
             </Typography>
