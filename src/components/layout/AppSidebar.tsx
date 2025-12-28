@@ -6,6 +6,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import Logo from '@/components/ui/Logo';
 import Divider from '@mui/material/Divider';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
@@ -29,7 +30,9 @@ export default function AppSidebar() {
             {/* Profile Summary Section */}
             <Box sx={{ p: 3, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1 }}>
                 <Avatar sx={{ width: 80, height: 80, bgcolor: 'secondary.main' }}>U</Avatar>
-                <Typography variant="h6" sx={{ fontWeight: 'bold' }}>User Name</Typography>
+                <Box sx={{ p: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <Logo width={140} height={60} />
+                </Box>
                 <Typography variant="body2" color="text.secondary">@handle</Typography>
                 <Box sx={{ display: 'flex', gap: 2, mt: 1 }}>
                     <Typography variant="caption" color="text.secondary"><strong>120</strong> Followers</Typography>

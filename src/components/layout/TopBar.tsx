@@ -5,6 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
+import Logo from '@/components/ui/Logo';
 import { styled, alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 
@@ -54,14 +55,9 @@ export default function TopBar() {
     return (
         <AppBar position="static" color="transparent" elevation={0} sx={{ borderBottom: 1, borderColor: 'divider' }}>
             <Toolbar>
-                <Typography
-                    variant="h6"
-                    noWrap
-                    component="div"
-                    sx={{ display: { xs: 'none', sm: 'block' }, color: 'primary.main', fontWeight: 'bold' }}
-                >
-                    The Kibbutz
-                </Typography>
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Logo width={120} height={40} />
+                </Box>
 
                 <Box sx={{ flexGrow: 1 }} />
 

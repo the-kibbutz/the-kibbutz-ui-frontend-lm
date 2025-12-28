@@ -44,7 +44,7 @@ export default function LandingPage() {
         {/* Live Implementation Card */}
         <Grid size={{ xs: 12, md: 5 }}>
           <Card sx={{ height: '100%', borderRadius: 4, transition: 'transform 0.2s', '&:hover': { transform: 'scale(1.02)' } }}>
-            <CardActionArea component={Link} href="/live/web/w2" sx={{ height: '100%', p: 4, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+            <CardActionArea component={Link} href="/live" sx={{ height: '100%', p: 4, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
               <WebIcon sx={{ fontSize: 80, color: 'primary.main', mb: 2 }} />
               <Typography variant="h4" gutterBottom fontWeight="bold">
                 Live App
