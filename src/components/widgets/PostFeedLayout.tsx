@@ -101,17 +101,31 @@ export default function PostFeedLayout() {
                         {/* Left Sidebar */}
                         <Grid size={{ xs: 12, md: 3 }} sx={{ display: { xs: 'none', md: 'block' } }}>
                             <Paper elevation={0} sx={{ p: 2, borderRadius: 2 }}>
+                                {/* User Profile Summary Card */}
+                                <Box sx={{ mb: 3, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1 }}>
+                                    <Avatar sx={{ width: 80, height: 80, bgcolor: paletteColors.steelBlue, mb: 1 }}>JD</Avatar>
+                                    <Typography variant="h6" fontWeight="bold">John Doe</Typography>
+                                    <Typography variant="body2" color="text.secondary">@johndoe</Typography>
+                                    <Box sx={{ display: 'flex', gap: 2, mt: 1 }}>
+                                        <Typography variant="caption" color="text.secondary"><strong>120</strong> Followers</Typography>
+                                        <Typography variant="caption" color="text.secondary"><strong>45</strong> Following</Typography>
+                                    </Box>
+                                </Box>
+                                
+                                <Divider sx={{ my: 2 }} />
+                                
+                                {/* Navigation Menu */}
                                 <List>
                                     <ListItem disablePadding>
                                         <ListItemButton>
                                             <ListItemIcon><HomeIcon /></ListItemIcon>
-                                            <ListItemText primary="Feed" />
+                                            <ListItemText primary="My Feed" />
                                         </ListItemButton>
                                     </ListItem>
                                     <ListItem disablePadding>
                                         <ListItemButton>
                                             <ListItemIcon><ChatIcon /></ListItemIcon>
-                                            <ListItemText primary="Chats" />
+                                            <ListItemText primary="My Chats" />
                                         </ListItemButton>
                                     </ListItem>
                                     <ListItem disablePadding>

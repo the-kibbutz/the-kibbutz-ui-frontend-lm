@@ -7,6 +7,7 @@ import { ScreenData } from '@/lib/types';
 import { CheckCircledIcon, SewingPinFilledIcon } from '@radix-ui/react-icons'; // Using SewingPin as a 'construction' proxy or similar
 // Actually let's use ExclamationTriangleIcon for missing or just a neat generic icon
 import { ExclamationTriangleIcon } from '@radix-ui/react-icons';
+import { paletteColors } from '@/theme/theme';
 
 interface RadixScreenCardProps {
     screen: ScreenData;
@@ -53,48 +54,48 @@ export default function RadixScreenCard({ screen, platform, imageHeight = 200, c
         >
             <Inset side="top" pb="current">
                 <Box style={{
-                    height: imageHeight,
+                    minHeight: imageHeight,
                     backgroundColor: 'var(--gray-3)',
                     position: 'relative',
-                    overflow: 'hidden',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
+                    overflow: 'auto',
+                    padding: 'var(--space-3)'
                 }}>
-                    {isImplemented ? (
-                        <Box style={{
-                            width: '100%',
-                            height: '100%',
-                            overflow: 'hidden',
-                            position: 'relative',
-                            pointerEvents: 'none',
-                            backgroundColor: 'white' // Ensure background is white for contrast
-                        }}>
-                            <Box style={{
-                                width: platform === 'web' ? '1280px' : '375px', // Simulate standard widths
-                                height: platform === 'web' ? '800px' : '812px',
-                                transform: platform === 'web' ? 'scale(0.25)' : 'scale(0.5)',
-                                transformOrigin: 'top left',
-                                position: 'absolute',
-                                top: 0,
-                                left: platform === 'web' ? '50%' : '50%',
-                                marginLeft: platform === 'web' ? '-160px' : '-94px', // (containerWidth/2 - (simulatedWidth * scale)/2) ... simplified: just center via flex is harder with scale. 
-                                // Actually, transformOrigin 'top center' is easiest.
-                            }}>
-                                <Box style={{
-                                    transform: 'none', // Reset inner to avoid double math
-                                    width: '100%',
-                                    height: '100%',
-                                    // For 'top center' origin approach:
-                                }}>
-                                    {componentPreview}
+                    {/* Component List */}
+                    {screen.ui_components && screen.ui_components.length > 0 ? (
+                        <Flex direction="column" gap="1">
+                            {screen.ui_components.map((component, index) => (
+                                <Box 
+                                    key={index}
+                                    style={{
+                                        padding: 'var(--space-1)',
+                                        borderRadius: 'var(--radius-2)',
+                                        transition: 'background-color 0.2s'
+                                    }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.backgroundColor = 'rgba(166, 190, 213, 0.1)';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.backgroundColor = 'transparent';
+                                    }}
+                                >
+                                    <Text 
+                                        size="2" 
+                                        style={{ 
+                                            color: paletteColors.steelBlue,
+                                            fontWeight: 500
+                                        }}
+                                    >
+                                        • {component.name}
+                                    </Text>
                                 </Box>
-                            </Box>
-                        </Box>
+                            ))}
+                        </Flex>
                     ) : (
-                        <Flex direction="column" align="center" gap="2" style={{ opacity: 0.5 }}>
-                            <Text size="5">🖼️</Text>
-                            <Text size="2">Image Preview Placeholder</Text>
+                        <Flex direction="column" align="center" justify="center" style={{ 
+                            height: imageHeight,
+                            opacity: 0.5 
+                        }}>
+                            <Text size="2" color="gray">No components listed</Text>
                         </Flex>
                     )}
 

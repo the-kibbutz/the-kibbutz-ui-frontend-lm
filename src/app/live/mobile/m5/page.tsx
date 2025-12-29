@@ -89,11 +89,11 @@ export default function MobileProfilePage() {
                             }}>
                                 <TipsAndUpdatesIcon sx={{ fontSize: 40, color: 'text.disabled' }} />
                             </Box>
-                            <Typography variant="h6" color="text.primary" gutterBottom>No activities yet</Typography>
+                            <Typography variant="h6" color="text.primary" gutterBottom>No posts yet</Typography>
                             <Typography variant="body2" color="text.secondary" sx={{ mb: 3, maxWidth: 200 }}>
-                                Share your first update with the community to get started.
+                                Create a new post
                             </Typography>
-                            <Button variant="contained" disableElevation>Create New Post</Button>
+                            <Button variant="contained" disableElevation>Create a new post</Button>
                         </>
                     )}
                     {tabValue !== 0 && (

@@ -24,10 +24,7 @@ export default function MobileLandingPage() {
             <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', mt: 4 }}>
                 <Logo width={200} height={80} />
                 <Typography variant="h4" component="h1" fontWeight="bold" align="center" sx={{ mt: 4, mb: 1 }}>
-                    Welcome
-                </Typography>
-                <Typography variant="body1" color="text.secondary" align="center">
-                    To The Kibbutz Community
+                    Welcome to The Kibbutz
                 </Typography>
             </Box>
 
@@ -72,12 +69,19 @@ export default function MobileLandingPage() {
                 </Button>
 
                 <Box sx={{ mt: 2, textAlign: 'center' }}>
-                    <Typography variant="body2">
-                        New here? {' '}
-                        <Link href="/live/mobile/m4" style={{ textDecoration: 'none', fontWeight: 'bold', color: 'inherit' }}>
-                            Join Now
-                        </Link>
+                    <Typography variant="h6" fontWeight="bold" gutterBottom>
+                        Join Now
                     </Typography>
+                    <Button
+                        variant="contained"
+                        fullWidth
+                        size="large"
+                        href="/live/mobile/m4"
+                        component={Link}
+                        sx={{ py: 1.5, borderRadius: 2, mt: 1 }}
+                    >
+                        Register
+                    </Button>
                 </Box>
             </Box>
 

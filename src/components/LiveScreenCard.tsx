@@ -5,10 +5,13 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
 import { useRouter } from 'next/navigation';
 import { ScreenData } from '@/lib/types';
 import ConstructionIcon from '@mui/icons-material/Construction';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import { paletteColors } from '@/theme/theme';
 
 interface LiveScreenCardProps {
     screen: ScreenData;
@@ -85,35 +88,51 @@ export default function LiveScreenCard({ screen, platform, imageHeight = 200, co
                     }
                 }}
             >
-                <Box sx={{ position: 'relative', height: imageHeight, bgcolor: '#f0f2f5', overflow: 'hidden' }}>
-
-                    {/* Render Component Preview if available */}
-                    {isImplemented && componentPreview ? (
-                        <Box sx={{
-                            width: '100%',
-                            height: '100%',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            overflow: 'hidden',
-                            position: 'relative',
-                            pointerEvents: 'none' // Disable interactions within the preview
-                        }}>
-                            {/* Scale down the component to fit the card window */}
-                            <Box sx={{ transform: 'scale(0.4)', transformOrigin: 'center top', width: '250%', mt: 4 }}>
-                                {componentPreview}
-                            </Box>
-
-                        </Box>
+                <Box sx={{ 
+                    position: 'relative', 
+                    minHeight: imageHeight, 
+                    bgcolor: '#f0f2f5', 
+                    overflow: 'auto',
+                    p: 2
+                }}>
+                    {/* Component List */}
+                    {screen.ui_components && screen.ui_components.length > 0 ? (
+                        <List dense sx={{ py: 0 }}>
+                            {screen.ui_components.map((component, index) => (
+                                <ListItem 
+                                    key={index} 
+                                    sx={{ 
+                                        py: 0.5,
+                                        px: 1,
+                                        '&:hover': {
+                                            bgcolor: 'rgba(166, 190, 213, 0.1)',
+                                            borderRadius: 1
+                                        }
+                                    }}
+                                >
+                                    <Typography 
+                                        variant="body2" 
+                                        sx={{ 
+                                            color: paletteColors.steelBlue,
+                                            fontWeight: 500,
+                                            fontSize: '0.875rem'
+                                        }}
+                                    >
+                                        • {component.name}
+                                    </Typography>
+                                </ListItem>
+                            ))}
+                        </List>
                     ) : (
-                        // Fallback to Image
-                        <CardMedia
-                            component="img"
-                            height={imageHeight}
-                            image={`/assets/ui/${platform}/${screen.imageName}`}
-                            alt={screen.imageName}
-                            sx={{ objectFit: 'cover', objectPosition: 'top', filter: 'grayscale(100%) opacity(0.5)' }}
-                        />
+                        <Box sx={{ 
+                            display: 'flex', 
+                            alignItems: 'center', 
+                            justifyContent: 'center', 
+                            height: imageHeight,
+                            color: 'text.secondary'
+                        }}>
+                            <Typography variant="body2">No components listed</Typography>
+                        </Box>
                     )}
 
                     {/* Status Overlay */}
