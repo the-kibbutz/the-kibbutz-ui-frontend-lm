@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-// import "./globals.css"; // We might want to keep or remove globals.css depending on MUI interaction. Usually MUI replaces it.
-import ThemeRegistry from "@/components/ThemeRegistry/ThemeRegistry";
+import '@radix-ui/themes/styles.css';
+import { Theme } from '@radix-ui/themes';
 
 export const metadata: Metadata = {
   title: "The Kibbutz Showcase",
@@ -15,7 +15,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ThemeRegistry>{children}</ThemeRegistry>
+        <Theme appearance="light" accentColor="indigo" grayColor="slate" radius="medium">
+          <div style={{ backgroundColor: 'var(--gray-2)', minHeight: '100vh' }}>
+            {children}
+          </div>
+        </Theme>
       </body>
     </html>
   );
