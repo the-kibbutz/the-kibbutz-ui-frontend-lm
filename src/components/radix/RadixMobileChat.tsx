@@ -18,15 +18,16 @@ export default function RadixMobileChat() {
 
     return (
         <Box style={{
-            height: '100%',
-            minHeight: 600, // Simulate mobile height
             width: '100%',
-            maxWidth: 450,
+            maxWidth: 420,
             margin: '0 auto',
+            height: 'min(760px, calc(100dvh - 120px))',
             display: 'flex',
             flexDirection: 'column',
-            position: 'relative',
-            backgroundColor: 'white'
+            backgroundColor: 'white',
+            borderRadius: 'var(--radius-3)',
+            overflow: 'hidden',
+            border: '1px solid var(--gray-4)',
         }}>
             {/* Header */}
             <Box style={{ backgroundColor: paletteColors.darkSlateGray, padding: '16px', borderBottom: '1px solid var(--gray-5)' }}>
@@ -41,8 +42,8 @@ export default function RadixMobileChat() {
             </Box>
 
             {/* List */}
-            <ScrollArea type="auto" scrollbars="vertical" style={{ flex: 1 }}>
-                <Box p="0" pb="60px"> {/* Padding bottom for nav bar */}
+            <ScrollArea type="auto" scrollbars="vertical" style={{ flex: 1, minHeight: 0 }}>
+                <Box p="0">
                     {chats.map((chat, i) => (
                         <Box key={i} style={{ padding: '12px 16px', borderBottom: '1px solid var(--gray-4)', cursor: 'pointer' }}>
                             <Flex gap="3" align="center">
@@ -62,10 +63,8 @@ export default function RadixMobileChat() {
                 </Box>
             </ScrollArea>
 
-            {/* Bottom Nav - Fixed Position style within this container */}
-            <Box style={{ position: 'absolute', bottom: 0, left: 0, right: 0 }}>
-                <RadixMobileNav />
-            </Box>
+            {/* Bottom Nav */}
+            <RadixMobileNav />
         </Box>
     );
 }

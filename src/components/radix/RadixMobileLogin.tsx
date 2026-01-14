@@ -7,18 +7,20 @@ import { paletteColors } from '@/theme/theme';
 export default function RadixMobileLogin() {
     return (
         <Box style={{
-            height: '100%',
-            minHeight: 600,
             width: '100%',
-            maxWidth: 450,
+            maxWidth: 420,
             margin: '0 auto',
+            height: 'min(760px, calc(100dvh - 120px))',
             backgroundColor: 'white',
-            padding: '40px 24px',
+            padding: '24px 16px',
             display: 'flex',
-            flexDirection: 'column'
+            flexDirection: 'column',
+            borderRadius: 'var(--radius-3)',
+            overflow: 'hidden',
+            border: '1px solid var(--gray-4)',
         }}>
             <Box mb="8">
-                <Heading size="8" mb="2" style={{ color: paletteColors.darkSlateGray }}>Login</Heading>
+                <Heading size="7" mb="2" style={{ color: paletteColors.darkSlateGray }}>Login</Heading>
                 <Text size="3" color="gray">Welcome back to The Kibbutz</Text>
             </Box>
 
@@ -37,7 +39,7 @@ export default function RadixMobileLogin() {
                 <Separator style={{ flex: 1 }} />
             </Flex>
 
-            <Flex direction="column" gap="4" style={{ flex: 1 }}>
+            <Flex direction="column" gap="4" style={{ flex: 1, minHeight: 0, overflowY: 'auto' }}>
                 <Box>
                     <Text size="2" weight="bold" mb="1" as="div">Email</Text>
                     <TextField.Root placeholder="Enter your email" size="3">

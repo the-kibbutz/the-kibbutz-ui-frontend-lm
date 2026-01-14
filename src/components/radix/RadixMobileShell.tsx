@@ -7,27 +7,24 @@ import RadixMobileNav from './RadixMobileNav';
 export default function RadixMobileShell() {
     return (
         <Box style={{
-            height: '100%',
-            minHeight: 600,
             width: '100%',
-            maxWidth: 450,
+            maxWidth: 420,
             margin: '0 auto',
+            height: 'min(760px, calc(100dvh - 120px))',
             backgroundColor: paletteColors.lavenderBlush,
             borderRadius: 'var(--radius-3)',
             overflow: 'hidden',
             display: 'flex',
             flexDirection: 'column',
-            position: 'relative'
+            border: '1px solid var(--gray-4)'
         }}>
             {/* Empty Content Area */}
-            <Flex align="center" justify="center" style={{ flex: 1 }}>
+            <Flex align="center" justify="center" style={{ flex: 1, minHeight: 0 }}>
                 <Text color="gray" size="2">Content Area</Text>
             </Flex>
 
             {/* Bottom Nav */}
-            <Box style={{ position: 'absolute', bottom: 0, left: 0, right: 0 }}>
-                <RadixMobileNav />
-            </Box>
+            <RadixMobileNav />
         </Box>
     );
 }

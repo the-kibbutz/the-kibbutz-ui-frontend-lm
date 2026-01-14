@@ -7,8 +7,19 @@ import RadixMobileNav from './RadixMobileNav';
 
 export default function RadixMobileProfile() {
     return (
-        <Box style={{ height: '100%', minHeight: 600, backgroundColor: 'var(--color-background)', borderRadius: 'var(--radius-3)', overflow: 'hidden', border: '1px solid var(--gray-4)', position: 'relative' }}>
-            <Box style={{ paddingBottom: 60, height: '100%', overflowY: 'auto' }}>
+        <Box style={{
+            width: '100%',
+            maxWidth: 420,
+            margin: '0 auto',
+            height: 'min(760px, calc(100dvh - 120px))',
+            backgroundColor: 'var(--color-background)',
+            borderRadius: 'var(--radius-3)',
+            overflow: 'hidden',
+            border: '1px solid var(--gray-4)',
+            display: 'flex',
+            flexDirection: 'column'
+        }}>
+            <Box style={{ flex: 1, minHeight: 0, overflowY: 'auto' }}>
                 {/* Header */}
                 <Box style={{ backgroundColor: 'var(--accent-9)', padding: '24px 16px', color: 'white', position: 'relative' }}>
                     <Flex direction="column" align="center">
@@ -60,9 +71,7 @@ export default function RadixMobileProfile() {
             </Box>
 
             {/* Bottom Nav */}
-            <Box style={{ position: 'absolute', bottom: 0, left: 0, right: 0 }}>
-                <RadixMobileNav />
-            </Box>
+            <RadixMobileNav />
         </Box>
     );
 }

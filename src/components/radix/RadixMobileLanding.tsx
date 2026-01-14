@@ -5,14 +5,27 @@ import { paletteColors } from '@/theme/theme';
 
 export default function RadixMobileLanding() {
     return (
-        <Box style={{ height: '100%', minHeight: 500, backgroundColor: 'var(--color-background)', borderRadius: 'var(--radius-3)', overflow: 'hidden', border: '1px solid var(--gray-4)', display: 'flex', flexDirection: 'column' }}>
+        <Box
+            style={{
+                width: '100%',
+                maxWidth: 420,
+                margin: '0 auto',
+                height: 'min(760px, calc(100dvh - 120px))',
+                backgroundColor: 'var(--color-background)',
+                borderRadius: 'var(--radius-3)',
+                overflow: 'hidden',
+                border: '1px solid var(--gray-4)',
+                display: 'flex',
+                flexDirection: 'column'
+            }}
+        >
             {/* Header */}
             <Box style={{ backgroundColor: paletteColors.moccasin, padding: '32px 16px', borderBottomLeftRadius: '32px', borderBottomRightRadius: '32px', textAlign: 'center' }}>
                 <Heading size="8" mb="2" style={{ color: paletteColors.darkSlateGray }}>Logo</Heading>
                 <Heading size="6" style={{ color: paletteColors.darkSlateGray }}>Welcome</Heading>
             </Box>
 
-            <Flex direction="column" gap="3" p="4" flexGrow="1">
+            <Flex direction="column" gap="3" p="4" flexGrow="1" style={{ minHeight: 0, overflowY: 'auto' }}>
                 <Button size="3" variant="outline" color="red" style={{ justifyContent: 'center' }}>
                     Continue with Google
                 </Button>

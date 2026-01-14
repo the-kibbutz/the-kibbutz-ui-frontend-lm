@@ -6,23 +6,25 @@ import { paletteColors } from '@/theme/theme';
 export default function RadixMobileSignup() {
     return (
         <Box style={{
-            height: '100%',
-            minHeight: 700, // Taller for more content
             width: '100%',
-            maxWidth: 450,
+            maxWidth: 420,
             margin: '0 auto',
+            height: 'min(760px, calc(100dvh - 120px))',
             backgroundColor: 'white',
-            padding: '40px 24px',
+            padding: '24px 16px',
             display: 'flex',
-            flexDirection: 'column'
+            flexDirection: 'column',
+            borderRadius: 'var(--radius-3)',
+            overflow: 'hidden',
+            border: '1px solid var(--gray-4)',
         }}>
             <Box mb="6">
-                <Heading size="8" mb="2" style={{ color: paletteColors.steelBlue }}>Create Account</Heading>
+                <Heading size="7" mb="2" style={{ color: paletteColors.steelBlue }}>Create Account</Heading>
                 <Text size="3" color="gray">Join The Kibbutz today</Text>
             </Box>
 
-            <Flex direction="column" gap="4" style={{ flex: 1 }}>
-                <Flex gap="3">
+            <Flex direction="column" gap="4" style={{ flex: 1, minHeight: 0, overflowY: 'auto' }}>
+                <Flex gap="3" style={{ flexDirection: 'column' }}>
                     <Box style={{ flex: 1 }}>
                         <Text size="2" weight="bold" mb="1" as="div">First Name</Text>
                         <TextField.Root placeholder="John" size="3" />

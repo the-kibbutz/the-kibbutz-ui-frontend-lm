@@ -68,14 +68,37 @@ export default async function RadixComponentPage({ params }: { params: Promise<{
         );
     }
 
+    const isMobile = platform === 'mobile';
+
     return (
-        <Box p="6" style={{ minHeight: '100vh', backgroundColor: 'var(--gray-2)' }}>
-            <Box mb="4">
+        <Box
+            style={{
+                minHeight: '100dvh',
+                backgroundColor: 'var(--gray-2)',
+                padding: isMobile ? 12 : 24,
+                overflowX: 'hidden',
+            }}
+        >
+            <Box mb={isMobile ? "3" : "4"}>
                 <RadixBackButton href="/radix" label="Back to Showcase" />
             </Box>
 
-            <Flex justify="center" align="start" style={{ minHeight: '80vh' }}>
-                {ComponentToRender}
+            <Flex
+                justify="center"
+                align="start"
+                style={{
+                    minHeight: isMobile ? 'calc(100dvh - 72px)' : '80vh',
+                    width: '100%',
+                }}
+            >
+                <Box
+                    style={{
+                        width: '100%',
+                        maxWidth: isMobile ? 420 : 1200,
+                    }}
+                >
+                    {ComponentToRender}
+                </Box>
             </Flex>
         </Box>
     );
