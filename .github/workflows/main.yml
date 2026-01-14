@@ -19,5 +19,5 @@ jobs:
       
       - name: Push to organization repository
         run: |
-          git remote add org https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/the-kibutz/the-kibbutz-ui-frontend-lm.git
+          git remote add org https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/the-kibbutz/the-kibbutz-ui-frontend-lm.git
           git push org HEAD:master --force
