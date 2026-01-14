@@ -7,6 +7,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  // Exclude /live routes from build since they use MUI
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
 };
 
 export default nextConfig;
